@@ -8,9 +8,17 @@ import { Section } from "@/components/shared/section";
 export function CTASection({
   title = "准备好把 AI 落地到你的业务了吗？",
   description = "预约一次 30 分钟免费咨询，我们帮你评估场景、估算成本、规划路线。",
+  primaryLabel = "预约免费咨询",
+  primaryHref = "/contact",
+  secondaryLabel = "查看客户案例",
+  secondaryHref = "/cases",
 }: {
   title?: string;
   description?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 }) {
   return (
     <Section className="pb-24 md:pb-32">
@@ -35,12 +43,18 @@ export function CTASection({
             {description}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" render={<Link href="/contact" />}>
-              预约免费咨询 <ArrowRight data-icon="inline-end" />
+            <Button size="lg" render={<Link href={primaryHref} />}>
+              {primaryLabel} <ArrowRight data-icon="inline-end" />
             </Button>
-            <Button size="lg" variant="outline" render={<Link href="/cases" />}>
-              查看客户案例
-            </Button>
+            {secondaryLabel && (
+              <Button
+                size="lg"
+                variant="outline"
+                render={<Link href={secondaryHref} />}
+              >
+                {secondaryLabel}
+              </Button>
+            )}
           </div>
         </div>
       </div>
