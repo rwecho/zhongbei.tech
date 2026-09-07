@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useTheme } from "next-themes";
 import { Monitor, Moon, Sun } from "lucide-react";
 
@@ -12,22 +11,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+/**
+ * 主题切换：图标用 CSS 随 .dark 类切换（next-themes 注入脚本在水合前设置类），
+ * 避免 hydration 闪烁，也无需 mounted 状态。
+ */
 export function ThemeToggle() {
-  const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => setMounted(true), []);
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         render={<Button variant="ghost" size="icon" aria-label="切换主题" />}
       >
-        {mounted && resolvedTheme === "dark" ? (
-          <Moon className="size-4" />
-        ) : (
-          <Sun className="size-4" />
-        )}
+        <Sun className="size-4 dark:hidden" />
+        <Moon className="hidden size-4 dark:block" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>

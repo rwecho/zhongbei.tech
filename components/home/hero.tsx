@@ -88,10 +88,12 @@ export function Hero() {
             <span className="size-1.5 rounded-full bg-primary" />
             以终为始，向北而行
           </Badge>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-5xl xl:text-6xl">
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl xl:text-6xl">
             让大模型，
             <br className="hidden sm:block" />
-            真正跑在<span className="text-primary">你的业务</span>里
+            真正跑在
+            <br className="hidden sm:block" />
+            <span className="text-primary">你的业务里</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty md:text-lg lg:mx-0">
             终北科技专注大模型应用开发：智能客服、AI

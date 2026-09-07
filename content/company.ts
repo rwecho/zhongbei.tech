@@ -1,4 +1,3 @@
-import type { LucideIcon } from "lucide-react";
 import { Crosshair, Mountain, Users, Rocket } from "lucide-react";
 
 export const company = {
