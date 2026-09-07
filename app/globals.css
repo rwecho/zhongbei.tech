@@ -39,6 +39,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-glow: var(--brand-glow);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -48,73 +50,81 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/*
+ * 终北科技 · 品牌主题（北极星 Polaris 意象，蓝紫基调）
+ * 亮色：冷白底 + 靛蓝主色；暗色：深蓝黑底 + 提亮降饱和的主色
+ */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(0.99 0.003 267);
+  --foreground: oklch(0.185 0.02 267);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.185 0.02 267);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.185 0.02 267);
+  --primary: oklch(0.52 0.21 267);
+  --primary-foreground: oklch(0.985 0.002 267);
+  --secondary: oklch(0.965 0.008 267);
+  --secondary-foreground: oklch(0.28 0.04 267);
+  --muted: oklch(0.965 0.006 267);
+  --muted-foreground: oklch(0.505 0.02 267);
+  --accent: oklch(0.955 0.015 267);
+  --accent-foreground: oklch(0.28 0.04 267);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.915 0.01 267);
+  --input: oklch(0.915 0.01 267);
+  --ring: oklch(0.6 0.14 267);
+  --chart-1: oklch(0.55 0.21 267);
+  --chart-2: oklch(0.65 0.15 200);
+  --chart-3: oklch(0.7 0.15 145);
+  --chart-4: oklch(0.75 0.14 85);
+  --chart-5: oklch(0.65 0.19 320);
+  --brand-soft: oklch(0.955 0.025 267);
+  --brand-glow: oklch(0.7 0.17 267 / 16%);
+  --sidebar: oklch(0.985 0.004 267);
+  --sidebar-foreground: oklch(0.185 0.02 267);
+  --sidebar-primary: oklch(0.52 0.21 267);
+  --sidebar-primary-foreground: oklch(0.985 0.002 267);
+  --sidebar-accent: oklch(0.955 0.015 267);
+  --sidebar-accent-foreground: oklch(0.28 0.04 267);
+  --sidebar-border: oklch(0.915 0.01 267);
+  --sidebar-ring: oklch(0.6 0.14 267);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.148 0.015 267);
+  --foreground: oklch(0.972 0.005 267);
+  --card: oklch(0.192 0.02 267);
+  --card-foreground: oklch(0.972 0.005 267);
+  --popover: oklch(0.192 0.02 267);
+  --popover-foreground: oklch(0.972 0.005 267);
+  --primary: oklch(0.7 0.15 267);
+  --primary-foreground: oklch(0.148 0.03 267);
+  --secondary: oklch(0.252 0.025 267);
+  --secondary-foreground: oklch(0.972 0.005 267);
+  --muted: oklch(0.242 0.02 267);
+  --muted-foreground: oklch(0.718 0.018 267);
+  --accent: oklch(0.27 0.03 267);
+  --accent-foreground: oklch(0.972 0.005 267);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.55 0.12 267);
+  --chart-1: oklch(0.68 0.16 267);
+  --chart-2: oklch(0.72 0.13 200);
+  --chart-3: oklch(0.75 0.13 145);
+  --chart-4: oklch(0.8 0.12 85);
+  --chart-5: oklch(0.72 0.16 320);
+  --brand-soft: oklch(0.28 0.055 267);
+  --brand-glow: oklch(0.62 0.19 267 / 22%);
+  --sidebar: oklch(0.192 0.02 267);
+  --sidebar-foreground: oklch(0.972 0.005 267);
+  --sidebar-primary: oklch(0.7 0.15 267);
+  --sidebar-primary-foreground: oklch(0.148 0.03 267);
+  --sidebar-accent: oklch(0.27 0.03 267);
+  --sidebar-accent-foreground: oklch(0.972 0.005 267);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: oklch(0.55 0.12 267);
 }
 
 @layer base {
@@ -122,9 +132,56 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
   html {
-    @apply font-sans;
+    /* Geist 只覆盖拉丁字符，中文回退到系统字体栈，避免 CJK webfont 体积 */
+    font-family:
+      var(--font-sans),
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "PingFang SC",
+      "Hiragino Sans GB",
+      "Microsoft YaHei",
+      "Noto Sans SC",
+      sans-serif;
   }
+  ::selection {
+    background: var(--brand-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Hero / 页头网格底纹 */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--border) 65%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--border) 65%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* 玻璃拟态卡片 */
+@utility glass {
+  @apply border border-border/70 bg-card/60 backdrop-blur-xl;
+}
+
+/* 自上而下淡出的遮罩（配合 bg-grid 使用） */
+@utility mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 35%, transparent 90%);
+}
+
+/* 渐变文字 */
+@utility text-gradient {
+  @apply bg-gradient-to-r from-foreground via-foreground/85 to-foreground/60 bg-clip-text text-transparent;
 }
