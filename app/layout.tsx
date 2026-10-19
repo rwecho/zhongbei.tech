@@ -58,7 +58,8 @@ function OrganizationJsonLd() {
     description: site.description,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "苏州",
+      streetAddress: site.legal.address,
+      addressLocality: "苏州市",
       addressRegion: "江苏省",
       addressCountry: "CN",
     },
@@ -66,7 +67,6 @@ function OrganizationJsonLd() {
       "@type": "ContactPoint",
       contactType: "sales",
       email: site.contact.email,
-      telephone: site.contact.phone,
       availableLanguage: ["zh-CN"],
     },
   };

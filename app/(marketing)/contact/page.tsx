@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin } from "lucide-react";
 
 import { site } from "@/config/site";
 import { PageHeader } from "@/components/shared/page-header";
@@ -15,10 +15,9 @@ export const metadata: Metadata = {
 };
 
 const contactItems = [
-  { icon: MapPin, label: "公司地址", value: site.contact.address },
-  { icon: Phone, label: "联系电话", value: site.contact.phone },
   { icon: Mail, label: "邮箱", value: site.contact.email },
   { icon: Clock, label: "工作时间", value: site.contact.workTime },
+  { icon: MapPin, label: "公司地址", value: site.legal.address },
 ];
 
 export default function ContactPage() {
@@ -44,48 +43,24 @@ export default function ContactPage() {
             </div>
           </GlowCard>
 
-          {/* 联系方式 + 地图占位 */}
-          <div className="space-y-5 lg:col-span-2">
-            <GlowCard glow={false}>
-              <ul className="space-y-5 p-6">
-                {contactItems.map((item) => (
-                  <li key={item.label} className="flex items-start gap-3">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-primary">
-                      <item.icon className="size-4" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-muted-foreground">
-                        {item.label}
-                      </p>
-                      <p className="mt-0.5 text-sm font-medium">{item.value}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </GlowCard>
-
-            {/* 地图占位：网格纹理 + 定位标注，不引入地图 SDK 保持全静态 */}
-            <div className="bg-grid relative flex h-56 items-center justify-center overflow-hidden rounded-2xl border border-border/70">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(circle at 50% 50%, var(--brand-glow), transparent 65%)",
-                }}
-              />
-              <div className="relative flex flex-col items-center gap-1.5 text-center">
-                <span className="relative flex size-3">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60 motion-reduce:animate-none" />
-                  <span className="relative inline-flex size-3 rounded-full bg-primary" />
-                </span>
-                <p className="text-sm font-medium">{site.shortName}</p>
-                <p className="max-w-[240px] text-xs text-muted-foreground">
-                  {site.contact.address}
-                </p>
-              </div>
-            </div>
-          </div>
+          {/* 联系方式 */}
+          <GlowCard glow={false} className="lg:col-span-2">
+            <ul className="space-y-5 p-6">
+              {contactItems.map((item) => (
+                <li key={item.label} className="flex items-start gap-3">
+                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-primary">
+                    <item.icon className="size-4" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      {item.label}
+                    </p>
+                    <p className="mt-0.5 text-sm font-medium">{item.value}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </GlowCard>
         </div>
       </Section>
     </>

@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin } from "lucide-react";
 
 import { site } from "@/config/site";
 import { services } from "@/content/services";
 import { Logo } from "@/components/shared/logo";
-import { GithubIcon } from "@/components/shared/icons";
 
 export function Footer() {
   return (
@@ -15,18 +14,9 @@ export function Footer() {
           <div className="space-y-4">
             <Logo />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              {site.slogan}。专注大模型应用开发，让 AI 真正落地到业务中。
+              {site.slogan}。{site.tagline}
             </p>
             <div className="flex items-center gap-3 text-muted-foreground">
-              <a
-                href={site.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="transition-colors hover:text-foreground"
-              >
-                <GithubIcon className="size-4" />
-              </a>
               <a
                 href={`mailto:${site.contact.email}`}
                 aria-label="发送邮件"
@@ -77,22 +67,25 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0" />
-                {site.contact.address}
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="size-4 shrink-0" />
-                {site.contact.phone}
+                {site.legal.address}
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="size-4 shrink-0" />
                 {site.contact.email}
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock className="size-4 shrink-0" />
+                {site.contact.workTime}
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} {site.name}</p>
+          <p>
+            © {new Date().getFullYear()} {site.name} · 统一社会信用代码{" "}
+            {site.legal.creditCode}
+          </p>
           <a
             href={site.contact.icpUrl}
             target="_blank"

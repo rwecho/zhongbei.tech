@@ -21,9 +21,9 @@ export function ServicesOverview() {
         title="我们做什么"
         description="五项核心服务，覆盖企业 AI 落地的完整链路：从「该不该做」的评估，到「怎么做好」的交付，再到「持续变好」的迭代。"
       />
-      <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {featuredServices.map((service) => (
-          <GlowCard key={service.slug} className="flex">
+          <GlowCard key={service.slug} className="h-full">
             <Card className="h-full border-0 bg-transparent shadow-none">
               <CardHeader>
                 <div className="mb-3 flex size-11 items-center justify-center rounded-xl bg-brand-soft text-primary">

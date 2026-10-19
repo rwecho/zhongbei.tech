@@ -6,7 +6,6 @@ import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CTASection } from "@/components/shared/cta-section";
 import { Timeline } from "@/components/about/timeline";
-import { TeamGrid } from "@/components/about/team-grid";
 import { GlowCard } from "@/components/shared/glow-card";
 
 export const metadata: Metadata = {
@@ -63,9 +62,6 @@ export default function AboutPage() {
           ))}
         </div>
       </Section>
-
-      {/* 团队 */}
-      <TeamGrid />
 
       {/* 加入我们 CTA */}
       <CTASection

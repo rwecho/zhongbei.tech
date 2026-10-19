@@ -22,7 +22,7 @@ export function GlowCard({
           style={{ background: "var(--brand-glow)" }}
         />
       )}
-      <div className="relative">{props.children}</div>
+      <div className="relative flex h-full min-w-0 flex-1 flex-col">{props.children}</div>
     </div>
   );
 }
