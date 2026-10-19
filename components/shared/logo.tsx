@@ -3,7 +3,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { site } from "@/config/site";
 
-/** 北极星标识：四芒星 + 指北意象 */
+/** 北极星标识：极简单色四芒星，随文字颜色自适应亮暗主题 */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg
@@ -12,21 +12,10 @@ export function LogoMark({ className }: { className?: string }) {
       aria-hidden="true"
       className={cn("size-7", className)}
     >
-      <defs>
-        <linearGradient id="zb-star" x1="4" y1="4" x2="28" y2="28">
-          <stop stopColor="var(--primary)" />
-          <stop
-            offset="1"
-            stopColor="var(--primary)"
-            stopOpacity="0.55"
-          />
-        </linearGradient>
-      </defs>
       <path
-        d="M16 1.5 L18.9 13.1 L30.5 16 L18.9 18.9 L16 30.5 L13.1 18.9 L1.5 16 L13.1 13.1 Z"
-        fill="url(#zb-star)"
+        d="M16 2 L18.2 13.8 L30 16 L18.2 18.2 L16 30 L13.8 18.2 L2 16 L13.8 13.8 Z"
+        fill="currentColor"
       />
-      <circle cx="16" cy="16" r="2.2" fill="var(--background)" />
     </svg>
   );
 }
